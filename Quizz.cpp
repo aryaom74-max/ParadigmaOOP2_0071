@@ -30,3 +30,16 @@ public:
     }
 };
 
+// Kelas Turunan 1 (Derived Class)
+class RekeningSyariah : public RekeningBank {
+public:
+    // Constructor Rekening Syariah (Biaya admin di-set 0 atau bebas biaya)
+    RekeningSyariah(string nama, double sld) : RekeningBank(nama, sld, 0) {}
+
+    // Overriding fungsi potongAdmin
+    void potongAdmin() override {
+        cout << "Rekening Syariah: Bebas biaya admin." << endl;
+        // Saldo tidak berkurang
+    }
+};
+
