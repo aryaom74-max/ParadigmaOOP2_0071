@@ -56,3 +56,25 @@ public:
     }
 };
 
+// Fungsi Utama
+int main() {
+    cout << "=== SIMULASI REKENING BANK ===" << endl << endl;
+
+    // Membuat objek dari kelas Rekening Syariah
+    RekeningSyariah rekSyariah("Budi", 5000000);
+    rekSyariah.tampilkanInfo();
+    rekSyariah.potongAdmin();
+    cout << "Update Info setelah potongan:" << endl;
+    rekSyariah.tampilkanInfo();
+
+    cout << endl;
+
+    // Membuat objek dari kelas Rekening Konvensional
+    RekeningKonvensional rekKonvensional("Andi", 5000000, 15000);
+    rekKonvensional.tampilkanInfo();
+    rekKonvensional.potongAdmin(); // Ini akan memanggil fungsi yang mencetak teks di foto Anda
+    cout << "Update Info setelah potongan:" << endl;
+    rekKonvensional.tampilkanInfo();
+
+    return 0;
+}
