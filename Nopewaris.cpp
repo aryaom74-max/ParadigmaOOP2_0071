@@ -22,3 +22,10 @@ public:
     }
 };
 
+int main() {
+    derivedClass a;
+    a.perkenalan();
+    // a.perkenalan1(); // Baris ini di-comment atau dihapus jika perkenalan1() tidak didefinisikan di class ini
+
+    return 0;
+}
