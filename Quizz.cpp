@@ -43,3 +43,16 @@ public:
     }
 };
 
+// Kelas Turunan 2 (Derived Class)
+class RekeningKonvensional : public RekeningBank {
+public:
+    // Constructor Rekening Konvensional
+    RekeningKonvensional(string nama, double sld, double adm) : RekeningBank(nama, sld, adm) {}
+
+    // Overriding fungsi potongAdmin (Sesuai dengan baris kode di foto Anda)
+    void potongAdmin() override {
+        cout << "Rekening Konvensional: Dipotong biaya admin Rp " << admin << endl;
+        saldo -= admin; // Logika untuk mengurangi saldo dengan biaya admin
+    }
+};
+
